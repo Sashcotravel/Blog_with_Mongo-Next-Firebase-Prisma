@@ -4,13 +4,15 @@ import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/
 import React, {useEffect, useState} from 'react';
 import s from './write.module.css'
 import Image from "next/image";
-import ReactQuill from "react-quill";
 import "react-quill/dist/quill.bubble.css"
 import {useRouter} from "next/navigation";
 import {useSession} from "next-auth/react";
 import {app} from "@/utils/fisebase";
+import dynamic from "next/dynamic";
 
 const Write = () => {
+
+    const ReactQuill = dynamic(() => import("react-quill"), {ssr: false});
 
     const [open, setOpen] = useState(false)
     const [media, setMedia] = useState('')
