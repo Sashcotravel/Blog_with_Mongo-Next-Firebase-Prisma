@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonPre{
+    width: 100px;
+    border: none;
+    padding: 16px;
+    background-color: crimson;
+    color: white;
+    cursor: pointer;
+}
+
+.buttonNext{
+    width: 100px;
+    border: none;
+    padding: 16px;
+    background-color: crimson;
+    color: white;
+    cursor: pointer;
+}
+
+.buttonPre:disabled{
+    background-color: rgba(220, 20, 60, 0.51);
+    cursor: not-allowed;
+}
+
+.buttonNext:disabled{
+    background-color: rgba(220, 20, 60, 0.51);
+    cursor: not-allowed;
+}
